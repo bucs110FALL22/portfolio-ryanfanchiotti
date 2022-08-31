@@ -12,6 +12,6 @@ Welcome to CS 110. I look forward to working with you this semester. This is you
 
 Preferred Name: Ryan
 
-Discord username: Ryan Fanchiotti
+Discord username: Ryan Fanchiotti#9387
 
 REPL url: https://replit.com/@RyanFanchiotti1

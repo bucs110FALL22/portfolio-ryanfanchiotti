@@ -1,0 +1,13 @@
+print(eval("10 * 5"))
+print(eval("10 ** 2"))
+print(eval("15 / 10"))
+print(eval("15 // 10"))
+print(eval("-15 // 10"))
+print(eval("15 % 10"))
+print(eval("10 % 15"))
+print(eval("10 % 10"))
+print(eval("0 % 10"))
+print(eval("10 / 15")) ## it doesn't repeat forever or show that it does
+rate = int(input("What is the current exchange rate from Euros to Dollars?"))
+amount = int(input("How many Euros do you want to exchange?"))
+print(eval("amount * rate - 3"))

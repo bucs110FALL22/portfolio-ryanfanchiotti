@@ -1,0 +1,30 @@
+import turtle
+wn = turtle.Screen()
+turtle1 = turtle.Turtle()
+turtle1.color("purple")
+
+turtle1.forward(50)
+turtle1.left(90)
+turtle1.forward(50)
+turtle1.left(90)
+turtle1.forward(50)
+turtle1.left(90)
+turtle1.forward(50)
+turtle1.left(90)
+
+turtle1.penup()
+turtle1.left(180)
+turtle1.forward(50)
+
+turtle1.pendown()
+turtle1.color("red")
+turtle1.forward(50)
+turtle1.right(90)
+turtle1.forward(50)
+turtle1.right(90)
+turtle1.forward(50)
+turtle1.right(90)
+turtle1.forward(50)
+turtle1.right(90)
+
+wn.exitonclick()

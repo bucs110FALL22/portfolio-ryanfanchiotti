@@ -13,4 +13,7 @@ for i in range(0,2):
   if number > guess:
     print("Too low")
     guess = int(input("Guess again"))
+if number == guess:
+    print("Correct")
+    exit()
 print("Incorrect, the correct number was", number)

@@ -5,7 +5,7 @@ number = random.randint(1, 10)
 guess = int(input("Guess a number between 1 and 10"))
 for i in range(0,2):
   if number == guess:
-    print("You guessed it")
+    print("Correct")
     exit()
   if number < guess: 
     print("Too high")

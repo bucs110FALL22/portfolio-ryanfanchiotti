@@ -40,19 +40,80 @@ import pygame
 import math
 
 pygame.init()
-window = pygame.display.set_mode()
+window = pygame.display.set_mode((500,500))
 
 coords = []
-num_sides = 5
+num_sides = 3
 side_length = 100
-offset = 100
+offset = 150
 color = (255, 0, 0)
+wait_time = 5000
+width = 5
 
 for i in range(0,num_sides):
   theta = (2.0 * math.pi * i/num_sides) 
-  x = side_length * math.cos(theta) +    offset
+  x = side_length * math.cos(theta) + offset
   y = side_length * math.sin(theta) + offset
   coords.append((x,y))
-print(coords)
-pygame.draw.polygon(window, color, coords, 5)
+pygame.draw.polygon(window, color, coords, width)
+pygame.display.flip()
+pygame.time.wait(wait_time)
+window.fill("black")
 
+coords = []
+num_sides = 4
+
+for i in range(0,num_sides):
+  theta = (2.0 * math.pi * i/num_sides) 
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append((x,y))
+pygame.draw.polygon(window, color, coords, width)
+pygame.display.flip()
+pygame.time.wait(wait_time)
+window.fill("black")
+
+coords = []
+num_sides = 6
+side_length = 80
+
+
+for i in range(0,num_sides):
+  theta = (2.0 * math.pi * i/num_sides) 
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append((x,y))
+pygame.draw.polygon(window, color, coords, width)
+pygame.display.flip()
+pygame.time.wait(wait_time)
+window.fill("black")
+
+coords = []
+num_sides = 9
+side_length = 50
+
+
+for i in range(0,num_sides):
+  theta = (2.0 * math.pi * i/num_sides) 
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append((x,y))
+pygame.draw.polygon(window, color, coords, width)
+pygame.display.flip()
+pygame.time.wait(wait_time)
+window.fill("black")
+
+coords = []
+num_sides = 360
+side_length = 25
+
+
+for i in range(0,num_sides):
+  theta = (2.0 * math.pi * i/num_sides) 
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append((x,y))
+pygame.draw.polygon(window, color, coords, width)
+pygame.display.flip()
+pygame.time.wait(wait_time)
+window.fill("black")

@@ -14,4 +14,5 @@ Preferred Name: Ryan
 
 Discord username: Ryan Fanchiotti#9387
 
-REPL url: [https://replit.com/@RyanFanchiotti1](https://replit.com/join/vwndawwwip-ryanfanchiotti1)
+REPL url: https://replit.com/@RyanFanchiotti1
+https://replit.com/join/vwndawwwip-ryanfanchiotti1)

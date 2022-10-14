@@ -16,7 +16,7 @@ textpos = (10,10)
 if upperlimit > 2:
   for i in range(2, upperlimit + 1):
     count = 0
-    xx = i
+    num = i
     while i != 1:
       if i % 2 == 0:
         i = i/2
@@ -24,10 +24,10 @@ if upperlimit > 2:
       else:
         i = 3*i + 1
         count = count + 1
-    iters[xx * scale] = count * scale  
+    iters[num * scale] = count * scale  
     if count > max:
       max = count
-      maxvalue = xx
+      maxvalue = num
   coords = iters.items()
 else:
   print("your number has to be higher than 2")

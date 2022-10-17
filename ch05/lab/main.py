@@ -7,8 +7,9 @@ iters = {}
 max = 0
 maxvalue = 0
 scale = 10
-displaytime = 5000
+displaytime = 10000
 color = (255,0,0)
+color2 = (0,0,255)
 fontsize = 20
 corner = (0, 0)
 textpos = (10,10)
@@ -24,7 +25,7 @@ if upperlimit > 2:
       else:
         i = 3*i + 1
         count = count + 1
-    iters[num * scale] = count * scale  
+    iters[num * 300/upperlimit] = count * scale  
     if count > max:
       max = count
       maxvalue = num
@@ -42,7 +43,7 @@ pygame.draw.lines(display, color, False, coords2)
 new_display = pygame.transform.flip(display, False, True)
 display.blit(new_display,corner)
 font = pygame.font.Font(None, fontsize)
-msg = font.render(text2, False, color)
+msg = font.render(text2, False, color2)
 display.blit(msg, textpos)
 pygame.display.flip()
 pygame.time.wait(displaytime) 

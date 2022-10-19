@@ -21,7 +21,7 @@ def is_passing(letter=None):
   else:
     return(False)
 
-scoreinput = float(input("what score did you recieve?"))
+scoreinput = float(input("what score did you receive?"))
 print(scoreinput)
 lettergrade = percentage_to_letter(scoreinput)
 print(lettergrade)

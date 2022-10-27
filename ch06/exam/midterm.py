@@ -1,5 +1,6 @@
 import turtle
 import math
+
 window = turtle.Screen()
 turtle1 = turtle.Turtle()
 turtle.screensize(400, 400)
@@ -9,8 +10,10 @@ turtle1.penup()
 turtle1.goto(0,0)
 turtle.speed(10)
 
+
+
 def lengthquestion():
-  length1 = int(input("how wide would you like your drawing to be?"))
+  length1 = int(input("how large would you like your drawing to be?"))
   return length1
 
 def eqshape(side_length, color, sides):
@@ -36,7 +39,6 @@ def taxi(length):
     eqshape(length/3, "yellow", 4)
     turtle1.forward(length/3)
   turtle1.end_fill()
-  
   turtle1.goto(length/4, length/-8)
   wheel(length/10, "black")
   turtle1.goto(length/-4, length/-8)
@@ -73,6 +75,7 @@ def taxi(length):
   for i in range(3):
     eqshape(length/3, "black", 4)
     turtle1.forward(length/3)
+
 def main():
   length2 = lengthquestion()
   taxi(length2)

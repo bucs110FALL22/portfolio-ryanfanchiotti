@@ -1,6 +1,6 @@
 # CS110 Midterm Exam
 
-## SHORT DESCRIPTION This program draws a taxi through the use of repeated equilateral shapes and circles
+## SHORT DESCRIPTION This program draws a taxi at a specified size through the use of repeated equilateral shapes and circles
 
 ## KNOWN BUGS AND INCOMPLETE PARTS Nope
 

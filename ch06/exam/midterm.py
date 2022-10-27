@@ -24,15 +24,8 @@ speed = 10
 doublingfactor = 2
 checkerquantity = 20
 eachcolorcheckerquantity = int(checkerquantity/2)
-
 window = turtle.Screen()
 turtle1 = turtle.Turtle()
-turtle.screensize(windowsize, windowsize)
-turtle.hideturtle()
-turtle1.hideturtle()
-turtle1.penup()
-turtle.speed(speed)
-
 
 def lengthquestion():
   
@@ -126,6 +119,11 @@ def taxi(length=100):
     turtle1.forward(length/taxiheightfactor)
 
 def main():
+  turtle.screensize(windowsize, windowsize)
+  turtle.hideturtle()
+  turtle1.hideturtle()
+  turtle1.penup()
+  turtle.speed(speed)
   length2 = lengthquestion()
   taxi(length2)
       

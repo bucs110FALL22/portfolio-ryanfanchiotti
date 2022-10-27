@@ -3,24 +3,27 @@ import math
 
 windowsize = 400
 wheelsizefactor = 10
-#wheelxvalue = 
-#wheelyvalue = 
+wheelxvaluefactor = 4
+wheelyvaluefactor = 8
 middleyvalue = 0
 taxibasecolor = "yellow"
 taxioutlinecolor = "black"
 checkercolor1 = "black"
 checkercolor2 = "white"
 taxiheightfactor = 3
-#trianglesizefactor = 
-#eqtriangleheight = 
-#topsquaresizefactor = 
-#topsquarequantity = 
+trianglesizefactor = 4
+eqtriangleheight = math.sqrt(3)/8
+topsquaresizefactor = 16
+topsquarequantity = 4
 quarterrotation = 90
 halfrotation = 180
 fullrotation = 360
 squaresides = 4
 trianglesides = 3
 speed = 10
+doublingfactor = 2
+checkerquantity = 20
+eachcolorcheckerquantity = int(checkerquantity/2)
 
 window = turtle.Screen()
 turtle1 = turtle.Turtle()
@@ -80,47 +83,47 @@ def taxi(length=100):
   '''
   
   turtle1.begin_fill()
-  turtle1.goto(length/-2, middleyvalue)
-  for i in range(3):
-    eqshape(length/3, "yellow", squaresides)
-    turtle1.forward(length/3)
+  turtle1.goto(length/-doublingfactor, middleyvalue)
+  for i in range(taxiheightfactor):
+    eqshape(length/taxiheightfactor, taxibasecolor, squaresides)
+    turtle1.forward(length/taxiheightfactor)
   turtle1.end_fill()
-  turtle1.goto(length/4, length/-8)
+  turtle1.goto(length/wheelxvaluefactor, length/-wheelyvaluefactor)
   wheel(length/wheelsizefactor)
-  turtle1.goto(length/-4, length/-8)
+  turtle1.goto(length/-wheelxvaluefactor, length/-wheelyvaluefactor)
   wheel(length/wheelsizefactor)
-  turtle1.goto(length/-4, length/3)
-  eqshape(length/4, "black", trianglesides)
-  turtle1.forward(length/4)
-  eqshape(length/4, "black", trianglesides)
-  turtle1.left(90)
-  turtle1.forward(length * math.sqrt(3)/8)
-  turtle1.left(90)
-  turtle1.forward(length/8)
-  turtle1.right(180)
-  for i in range(4):
-    eqshape(length/16, "black", squaresides)
-    turtle1.forward(length/16)
-  turtle1.goto(length/-2, length/6)
-  for i in range(10):
+  turtle1.goto(length/-trianglesizefactor, length/taxiheightfactor)
+  eqshape(length/trianglesizefactor, taxioutlinecolor, trianglesides)
+  turtle1.forward(length/trianglesizefactor)
+  eqshape(length/trianglesizefactor, taxioutlinecolor, trianglesides)
+  turtle1.left(quarterrotation)
+  turtle1.forward(length * eqtriangleheight)
+  turtle1.left(quarterrotation)
+  turtle1.forward(length/(trianglesizefactor*doublingfactor))
+  turtle1.right(halfrotation)
+  for i in range(topsquarequantity):
+    eqshape(length/topsquaresizefactor, taxioutlinecolor, squaresides)
+    turtle1.forward(length/topsquaresizefactor)
+  turtle1.goto(length/-doublingfactor, length/(taxiheightfactor*doublingfactor))
+  for i in range(eachcolorcheckerquantity):
     turtle1.begin_fill()
-    eqshape(length/20, checkercolor1, squaresides)
+    eqshape(length/checkerquantity, checkercolor1, squaresides)
     turtle1.end_fill()
-    turtle1.forward(length/20)
-    turtle1.left(90)
-    turtle1.forward(length/20)
-    turtle1.right(90)
+    turtle1.forward(length/checkerquantity)
+    turtle1.left(quarterrotation)
+    turtle1.forward(length/checkerquantity)
+    turtle1.right(quarterrotation)
     turtle1.begin_fill()
-    eqshape(length/20, checkercolor2, squaresides)
+    eqshape(length/checkerquantity, checkercolor2, squaresides)
     turtle1.end_fill()
-    turtle1.forward(length/20)
-    turtle1.right(90)
-    turtle1.forward(length/20)
-    turtle1.left(90)
-  turtle1.goto(length/-2, middleyvalue)
-  for i in range(3):
-    eqshape(length/3, "black", squaresides)
-    turtle1.forward(length/3)
+    turtle1.forward(length/checkerquantity)
+    turtle1.right(quarterrotation)
+    turtle1.forward(length/checkerquantity)
+    turtle1.left(quarterrotation)
+  turtle1.goto(length/-doublingfactor, middleyvalue)
+  for i in range(taxiheightfactor):
+    eqshape(length/taxiheightfactor, taxioutlinecolor, squaresides)
+    turtle1.forward(length/taxiheightfactor)
 
 def main():
   length2 = lengthquestion()

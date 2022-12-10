@@ -1,7 +1,7 @@
 import requests
 
 class Location:
-  def __init__(self,ip):
+  def __init__(self,ip="8.8.8.8"):
     '''
     initializes the classes' attributes
     args: (str) ip

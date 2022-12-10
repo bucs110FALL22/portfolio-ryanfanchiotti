@@ -1,7 +1,7 @@
 import requests
 
 class Weather:
-  def __init__(self,latitude,longitude):
+  def __init__(self,latitude=0,longitude=0):
     '''
     initializes the classes' attributes
     args: (float) latitude, (float) longitude

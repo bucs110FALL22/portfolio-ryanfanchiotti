@@ -10,6 +10,13 @@ class Weather:
     self.latitude = latitude
     self.longitude = longitude
     self.api_url = "https://api.open-meteo.com/v1/forecast?latitude="+str(self.latitude)+ "&longitude="+str(self.longitude)+"&current_weather=true"
+  def __str__(self) -> str:
+    '''
+    allows for easy access to url
+    args: none
+    return: (str) url of website data is grabbed from
+    '''
+    return self.api_url
   def get(self):
     '''
     grabs data from url

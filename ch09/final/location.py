@@ -9,6 +9,13 @@ class Location:
     '''
     self.ip = str(ip)
     self.api_url = "https://api.ipgeolocation.io/ipgeo?apiKey=2086b4ea9201489fa8b8202f94b0316c&ip=" + self.ip
+  def __str__(self) -> str:
+    '''
+    allows for easy access to url
+    args: none
+    return: (str) url of website data is grabbed from
+    '''
+    return self.api_url
   def get(self):
     '''
     grabs data from url

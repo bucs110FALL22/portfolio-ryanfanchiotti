@@ -10,6 +10,13 @@ class SunriseSunset:
     self.latitude = latitude
     self.longitude = longitude
     self.api_url = "https://api.sunrise-sunset.org/json?lat="+str(latitude)+"&lng="+str(longitude)
+  def __str__(self) -> str:
+    '''
+    allows for easy access to url
+    args: none
+    return: (str) url of website data is grabbed from
+    '''
+    return self.api_url
   def get(self):
     '''
     grabs data from url

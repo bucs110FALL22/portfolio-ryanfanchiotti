@@ -17,6 +17,9 @@ def main():
   srt = sunrisesunset.getsunrise()
   sst = sunrisesunset.getsunset()
   print("Today's sunrise for the location of that ip address happens at "+str(srt)+" GMT, and sunset happens at "+str(sst)+" GMT")
-  
+  link1 = str(location)
+  link2 = str(weather)
+  link3 = str(sunrisesunset)
+  print("Information retrieved from "+link1+" , "+link2+" , and "+link3)
 
 main()

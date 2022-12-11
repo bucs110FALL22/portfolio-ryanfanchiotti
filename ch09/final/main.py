@@ -16,7 +16,7 @@ def main():
   sunrisesunset = SunriseSunset(latitude,longitude)
   srt = sunrisesunset.getsunrise()
   sst = sunrisesunset.getsunset()
-  print("Sunrise for the location of that ip address happens at "+str(srt)+" GMT, and sunset happens at "+str(sst)+" GMT")
+  print("Today's sunrise for the location of that ip address happens at "+str(srt)+" GMT, and sunset happens at "+str(sst)+" GMT")
   
 
 main()
